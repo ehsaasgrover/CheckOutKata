@@ -42,6 +42,22 @@ public class Tests
         //Assert
         Assert.AreEqual(expectedTotalPrice, totalPrice);
     }
+    
+    [TestCase(70,50,1,3,20,30,0,2,15, 20, 1)]
+    [TestCase(100, 50, 1, 3, 20, 30, 1, 2, 15, 20, 1)]
+    [TestCase(195, 50, 3, 3, 20, 30, 2, 2, 15, 20, 1)]
+    [TestCase(215, 50, 3, 3, 20, 30, 2, 2, 15, 20, 2)]
+    public void GivenInputIsABCs_ReturnPriceAsExpected(int expectedTotalPrice, int priceOfA, int numberOfA, int discountRuleForA, int discountValueForA, int priceOfB, int numberOfB, int discountRuleForB, int discountValueForB, int priceOfC, int numberOfC)
+    {
+        //Arrange
+        var checkout = new Checkout();  
+        
+        //Act
+        int totalPrice = checkout.CalculateTotalPrice(numberOfA, priceOfA, discountRuleForA, discountValueForA,numberOfB,priceOfB,discountRuleForB,discountValueForB, priceOfC, numberOfC);
+        
+        //Assert
+        Assert.AreEqual(expectedTotalPrice, totalPrice);
+    }
 }
 
 

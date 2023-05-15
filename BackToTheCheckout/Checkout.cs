@@ -18,6 +18,16 @@ namespace BackToTheCheckout
                 totalPrice -= (numberOfB / discountRuleForB) * discountValueForB;
             return totalPrice;
         }
-        
+
+        public int CalculateTotalPrice(int numberOfA, int priceOfA, int discountRuleForA, int discountValueForA,
+            int numberOfB, int priceOfB, int discountRuleForB, int discountValueForB, int numberOfC, int priceOfC)
+        {
+            int totalPrice = numberOfA * priceOfA;
+            totalPrice += numberOfB * priceOfB;
+            totalPrice += numberOfC * priceOfC;
+            totalPrice -= (numberOfA / discountRuleForA) * discountValueForA;
+            totalPrice -= (numberOfB / discountRuleForB) * discountValueForB;
+            return totalPrice;
+        }
     }    
 }
