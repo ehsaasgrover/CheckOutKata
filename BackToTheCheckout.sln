@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackToTheCheckout", "BackToTheCheckout\BackToTheCheckout.csproj", "{A7E3CAF2-DA11-4515-AB19-144FA1E76849}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7E3CAF2-DA11-4515-AB19-144FA1E76849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7E3CAF2-DA11-4515-AB19-144FA1E76849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7E3CAF2-DA11-4515-AB19-144FA1E76849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7E3CAF2-DA11-4515-AB19-144FA1E76849}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
