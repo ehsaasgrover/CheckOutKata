@@ -1,3 +1,5 @@
+using System.Xml;
+
 namespace BackToTheCheckout
 {
     public class Checkout
@@ -28,6 +30,55 @@ namespace BackToTheCheckout
             totalPrice -= (numberOfA / discountRuleForA) * discountValueForA;
             totalPrice -= (numberOfB / discountRuleForB) * discountValueForB;
             return totalPrice;
+        }
+
+        public int NewImplementation(string input)
+        {
+            int costA = 50;
+            int costB = 30;
+            int costC = 20;
+            int countA = 0;
+            int countB = 0;
+            int countC = 0;
+            int specialRuleA = 3;
+            int specialSavingsA = 20;
+            int specialRuleB = 2;
+            int specialSavingsB = 15;
+            
+            char[] charArray = input.ToCharArray();
+            
+            Console.WriteLine(charArray);
+
+            foreach (char i in charArray)
+            {
+                if (i == 'A')
+                {
+                    countA++;
+                }
+
+                if (i == 'B')
+                {
+                    countB++;
+                }
+
+                if (i == 'C')
+                {
+                    countC++;
+                }
+            }
+            
+            int totalPrice = countA * costA;
+            totalPrice += countB * costB;
+            totalPrice -= (countA / specialRuleA) * specialSavingsA;
+            totalPrice += countC * costC;
+            totalPrice -= (countB / specialRuleB) * specialSavingsB;
+            Console.WriteLine(totalPrice);
+            return totalPrice;
+            
+
+            Console.WriteLine("A: "+countA+" , B: "+countB+" , C: "+countC);
+            
+            
         }
     }    
 }

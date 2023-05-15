@@ -4,10 +4,6 @@ namespace BackToTheCheckout;
 
 public class Tests
 {
-    public Tests()
-    {
-    }
-
     [TestCase(50,50,1,3,20 )]
     [TestCase(100,50,2,3,20)]
     [TestCase(130,50,3,3,20)]
@@ -57,6 +53,38 @@ public class Tests
         
         //Assert
         Assert.AreEqual(expectedTotalPrice, totalPrice);
+    }
+    
+    [TestCase(50,50,1,3,20,30,0,2,15)]
+    [TestCase(80, 50, 1, 3, 20, 30, 1, 2, 15)]
+    [TestCase(175,50,3,3,20,30,2,2,15)]
+    [TestCase(290, 50, 6, 3, 20, 30, 1, 2, 15)]
+    [TestCase(305,50,6,3,20,30,2,2,15)]
+    public void GivenInputs_ReturnPriceAsExpected(int expectedTotalPrice, int priceOfA, int numberOfA, int discountRuleForA, int discountValueForA, int priceOfB, int numberOfB, int discountRuleForB, int discountValueForB)
+    {
+        //Arrange
+        var checkout = new Checkout();
+        var list = new List<KeyValuePair<string, int>>();
+        //Act
+        list.Add(new KeyValuePair<string, int>("A",1));
+        int totalPrice = checkout.CalculateTotalPrice(numberOfA, priceOfA, discountRuleForA, discountValueForA,numberOfB,priceOfB,discountRuleForB,discountValueForB);
+        
+        //Assert
+        Assert.AreEqual(expectedTotalPrice, totalPrice);
+    }
+
+    [TestCase("AAABBC", 195)]
+    public void NewImplementation(string input, int expectedCost)
+    {
+        //Arrange
+        var checkout = new Checkout();
+        
+        //Act
+        int totalPrice = checkout.NewImplementation(input);
+        
+        //Assert
+        Assert.AreEqual(expectedCost, totalPrice);
+
     }
 }
 
