@@ -5,11 +5,7 @@ namespace BackToTheCheckout
         public int CalculateTotalPrice(int numberOfA, int priceOfA, int discountRuleForA, int discountValueForA)
         {
             int totalPrice = numberOfA * priceOfA;
-            if (numberOfA == discountRuleForA)
-            {
-                totalPrice -= discountValueForA;
-            }
-
+                totalPrice -= (numberOfA / discountRuleForA) * discountValueForA;
             return totalPrice;
         }
     }    
