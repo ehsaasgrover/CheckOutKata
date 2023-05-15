@@ -2,16 +2,15 @@ namespace BackToTheCheckout
 {
     public class Checkout
     {
-        public int CalculateTotalPrice(int numberOfA, int priceOfA)
+        public int CalculateTotalPrice(int numberOfA, int priceOfA, int discountRuleForA, int discountValueForA)
         {
-            if (numberOfA == 3)
+            int totalPrice = numberOfA * priceOfA;
+            if (numberOfA == discountRuleForA)
             {
-                return 130;
+                totalPrice -= discountValueForA;
             }
-            else
-            {
-                return numberOfA * priceOfA;
-            }
+
+            return totalPrice;
         }
     }    
 }
