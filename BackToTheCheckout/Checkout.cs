@@ -21,30 +21,13 @@ namespace BackToTheCheckout
             return totalPrice;
         }
 
-        public int CalculateTotalPrice(int numberOfA, int priceOfA, int discountRuleForA, int discountValueForA,
-            int numberOfB, int priceOfB, int discountRuleForB, int discountValueForB, int numberOfC, int priceOfC)
+        public int NewImplementation(string input, Rules rules)
         {
-            int totalPrice = numberOfA * priceOfA;
-            totalPrice += numberOfB * priceOfB;
-            totalPrice += numberOfC * priceOfC;
-            totalPrice -= (numberOfA / discountRuleForA) * discountValueForA;
-            totalPrice -= (numberOfB / discountRuleForB) * discountValueForB;
-            return totalPrice;
-        }
-
-        public int NewImplementation(string input)
-        {
-            int costA = 50;
-            int costB = 30;
-            int costC = 20;
             int countA = 0;
             int countB = 0;
             int countC = 0;
-            int specialRuleA = 3;
-            int specialSavingsA = 20;
-            int specialRuleB = 2;
-            int specialSavingsB = 15;
-            
+            int countD = 0;
+                        
             char[] charArray = input.ToCharArray();
             
             Console.WriteLine(charArray);
@@ -65,19 +48,23 @@ namespace BackToTheCheckout
                 {
                     countC++;
                 }
+
+                if (i == 'D')
+                {
+                    countD++;
+                }
             }
             
-            int totalPrice = countA * costA;
-            totalPrice += countB * costB;
-            totalPrice -= (countA / specialRuleA) * specialSavingsA;
-            totalPrice += countC * costC;
-            totalPrice -= (countB / specialRuleB) * specialSavingsB;
+            int totalPrice = countA * rules.CostA;
+            totalPrice += countB * rules.CostB;
+            totalPrice += countC * rules.CostC;
+            totalPrice += countD * rules.CostD;
+            totalPrice -= (countA / rules.SpecialRuleA) * rules.SpecialSavingsA;
+            totalPrice -= (countB / rules.SpecialRuleB) * rules.SpecialSavingsB;
+            
             Console.WriteLine(totalPrice);
+            Console.WriteLine("A: "+countA+" , B: "+countB+" , C: "+countC+", D: "+countD);
             return totalPrice;
-            
-
-            Console.WriteLine("A: "+countA+" , B: "+countB+" , C: "+countC);
-            
             
         }
     }    
