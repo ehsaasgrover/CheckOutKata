@@ -7,11 +7,11 @@ namespace BackToTheCheckout
     public class Checkout
     {
         private Rules rules;
-        private int totalPrice = 0;
-        private int countA = 0;
-        private int countB = 0; 
-        private int countC = 0;
-        private int countD = 0;
+        private int totalPrice;
+        private int countA;
+        private int countB;
+        private int countC;
+        private int countD;
         
         public Checkout(Rules rules)
         {
@@ -96,13 +96,12 @@ namespace BackToTheCheckout
             {
                 countA++;
                 
-                // Check to see if there are just below the 'special' number of As
+                // Check to see if the number of A's meets the discount criteria
                 if (countA < rules.SpecialRuleA)
                 {
                     totalPrice += rules.CostA;    
                 }
 
-                // Check to see if there are more than or equal to the 'special' number of As
                 if (countA >= rules.SpecialRuleA)
                 {
                     totalPrice = countA * rules.CostA;
@@ -118,13 +117,12 @@ namespace BackToTheCheckout
             {
                 countB++;
 
-                // Check to see if there are just below the 'special' number of Bs
+                // Check to see if the number of B's meets the discount criteria
                 if (countB < rules.SpecialRuleB)
                 {
                     totalPrice += rules.CostB;
                 }
 
-                // Check to see if there are more than or equal to the 'special' number of Bs
                 if (countB >= rules.SpecialRuleB)
                 {
                     totalPrice = countA * rules.CostA;

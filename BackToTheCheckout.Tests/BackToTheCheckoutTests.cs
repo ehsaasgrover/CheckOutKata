@@ -18,7 +18,7 @@ public class Tests
     [TestCase("DABABA",190)]
     [TestCase("CDBA",115)]
     [TestCase("AAABBCDC",230)]
-    public void GivenInputIsMultipleValuesAndValid_ReturnTotalPriceAsExpected(string input, int expectedCost)
+    public void GivenInputHasMultipleValuesAndIsValid_ReturnTotalPriceAsExpected(string input, int expectedCost)
     {
         //Arrange
         var checkout = new Checkout(new Rules(50, 30, 20, 15, 3, 20, 2, 15));
@@ -35,7 +35,7 @@ public class Tests
     [TestCase("",0)]
     [TestCase("AAA",105)]
     [TestCase("AAABBC",165)]
-    public void GivenInputIsMultipleValuesAndValidWithDifferentRules_ReturnTotalPriceAsExpected(string input, int expectedCost)
+    public void GivenInputHasMultipleValuesAndIsValidWithDifferentRules_ReturnTotalPriceAsExpected(string input, int expectedCost)
     {
         //Arrange
         var checkout = new Checkout(new Rules(40, 20, 20, 15, 2, 15, 3, 20));
@@ -53,7 +53,7 @@ public class Tests
     [TestCase("AAB123BCCD")]
     [TestCase("123")]
     [TestCase("AB2C")]
-    public void GivenInputOfMultipleValuesIsNotValid_ThrowAnException(string invalidInput)
+    public void GivenInputHasMultipleValuesAndIsNotValid_ThrowAnException(string invalidInput)
     {
         //Arrange
         var checkout = new Checkout(new Rules(50, 30, 20, 15, 3, 20, 2, 15));
@@ -68,7 +68,7 @@ public class Tests
     // Test to check the incremental price is calculated as expected
     [TestCase("A",50)]
     [TestCase("",0)]
-    public void GivenInputIsIncrementalAndValid_ReturnTotalPriceAsExpected(string input, int expectedCost)
+    public void GivenInputIsIncrementalAndIsValid_ReturnTotalPriceAsExpected(string input, int expectedCost)
     {
         //Arrange
         var checkout = new Checkout(new Rules(50, 30, 20, 15, 3, 20, 2, 15));
@@ -83,7 +83,7 @@ public class Tests
     // Test to check the incremental price is calculated as expected with different rules
     [TestCase("A",40)]
     [TestCase("",0)]
-    public void GivenInputIsIncrementalAndValidWithDifferentRules_ReturnTotalPriceAsExpected(string input, int expectedCost)
+    public void GivenInputIsIncrementalAndIsValidWithDifferentRules_ReturnTotalPriceAsExpected(string input, int expectedCost)
     {
         //Arrange
         var checkout = new Checkout(new Rules(40, 20, 20, 15, 2, 15, 3, 20));
@@ -98,7 +98,7 @@ public class Tests
     // Test to check the scan method throws an invalid argument exception 
     [TestCase("X")]
     [TestCase("2")]
-    public void GivenInputIsIncrementalAndInvalid_ThrowAnException(string invalidInput)
+    public void GivenInputIsIncrementalAndIsNotValid_ThrowAnException(string invalidInput)
     {
         //Arrange
         var checkout = new Checkout(new Rules(50, 30, 20, 15, 3, 20, 2, 15));
