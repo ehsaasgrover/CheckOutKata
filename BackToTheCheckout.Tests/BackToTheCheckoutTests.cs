@@ -95,7 +95,6 @@ public class Tests
         Assert.That(totalPrice, Is.EqualTo(expectedCost));
     }
     
-
     // Test to check the scan method throws an invalid argument exception 
     [TestCase("X")]
     [TestCase("2")]

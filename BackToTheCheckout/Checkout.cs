@@ -47,8 +47,6 @@ namespace BackToTheCheckout
             
             char[] charArray = input.ToCharArray();
             
-            Console.WriteLine(charArray);
-            
             foreach (char i in charArray)
             {
                 if (i == 'A')
@@ -80,12 +78,11 @@ namespace BackToTheCheckout
             totalPrice -= (countA / rules.SpecialRuleA) * rules.SpecialSavingsA;
             totalPrice -= (countB / rules.SpecialRuleB) * rules.SpecialSavingsB;
             
-            Console.WriteLine(totalPrice);
-            Console.WriteLine("A: "+countA+" , B: "+countB+" , C: "+countC+", D: "+countD);
+            Console.WriteLine(input+" - Total: "+totalPrice);
+            //Console.WriteLine("A: "+countA+" , B: "+countB+" , C: "+countC+", D: "+countD);
             return totalPrice;
         }
 
-        
         // Calculates the incremental total price after each scan
         public int Scan(String item)
         {
@@ -151,7 +148,7 @@ namespace BackToTheCheckout
                 totalPrice += rules.CostD;
             }
             
-            Console.WriteLine(totalPrice);
+            Console.WriteLine("+"+item+" Total: "+totalPrice);
             return totalPrice;
         }
     }    
