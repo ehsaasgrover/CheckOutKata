@@ -7,7 +7,7 @@ namespace BackToTheCheckout;
 // Test to check the prices are calculated as expected
 public class Tests
 {
-    // Test Cases to check the total prices are calculated properly
+    // Test to check the total prices are calculated properly with valid inputs
     [TestCase("",0)]
     [TestCase("AAABBC", 195)]
     [TestCase("A",50)]
@@ -31,7 +31,7 @@ public class Tests
 
     }
     
-    // Test Cases to check the total prices are calculated properly
+    // Test to check the total prices are calculated properly with different rules
     [TestCase("",0)]
     [TestCase("AAA",105)]
     [TestCase("AAABBC",165)]
@@ -64,7 +64,8 @@ public class Tests
     }
     
     
-    // Test Cases to check the incremental price is calculated as expected
+    
+    // Test to check the incremental price is calculated as expected
     [TestCase("A",50)]
     [TestCase("",0)]
     public void GivenInputIsIncrementalAndValid_ReturnTotalPriceAsExpected(string input, int expectedCost)
@@ -78,7 +79,24 @@ public class Tests
         //Assert
         Assert.That(totalPrice, Is.EqualTo(expectedCost));
     }
+    
+    // Test to check the incremental price is calculated as expected with different rules
+    [TestCase("A",40)]
+    [TestCase("",0)]
+    public void GivenInputIsIncrementalAndValidWithDifferentRules_ReturnTotalPriceAsExpected(string input, int expectedCost)
+    {
+        //Arrange
+        var checkout = new Checkout(new Rules(40, 20, 20, 15, 2, 15, 3, 20));
+        
+        //Act
+        int totalPrice = checkout.Scan(input);
 
+        //Assert
+        Assert.That(totalPrice, Is.EqualTo(expectedCost));
+    }
+    
+
+    // Test to check the scan method throws an invalid argument exception 
     [TestCase("X")]
     [TestCase("2")]
     public void GivenInputIsIncrementalAndInvalid_ThrowAnException(string invalidInput)
