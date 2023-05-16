@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ehsaasgrover/RiderProjects/BackToTheCheckout/BackToTheCheckout/BackToTheCheckout.csproj": {}
+    "/Users/ehsaas.grover/Documents/CheckOutKata/BackToTheCheckout/BackToTheCheckout.csproj": {}
   },
   "projects": {
-    "/Users/ehsaasgrover/RiderProjects/BackToTheCheckout/BackToTheCheckout/BackToTheCheckout.csproj": {
+    "/Users/ehsaas.grover/Documents/CheckOutKata/BackToTheCheckout/BackToTheCheckout.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ehsaasgrover/RiderProjects/BackToTheCheckout/BackToTheCheckout/BackToTheCheckout.csproj",
+        "projectUniqueName": "/Users/ehsaas.grover/Documents/CheckOutKata/BackToTheCheckout/BackToTheCheckout.csproj",
         "projectName": "BackToTheCheckout",
-        "projectPath": "/Users/ehsaasgrover/RiderProjects/BackToTheCheckout/BackToTheCheckout/BackToTheCheckout.csproj",
-        "packagesPath": "/Users/ehsaasgrover/.nuget/packages/",
-        "outputPath": "/Users/ehsaasgrover/RiderProjects/BackToTheCheckout/BackToTheCheckout/obj/",
+        "projectPath": "/Users/ehsaas.grover/Documents/CheckOutKata/BackToTheCheckout/BackToTheCheckout.csproj",
+        "packagesPath": "/Users/ehsaas.grover/.nuget/packages/",
+        "outputPath": "/Users/ehsaas.grover/Documents/CheckOutKata/BackToTheCheckout/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/ehsaasgrover/.nuget/NuGet/NuGet.Config"
+          "/Users/ehsaas.grover/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -37,28 +37,6 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "Microsoft.NET.Test.Sdk": {
-              "target": "Package",
-              "version": "[17.5.0, )"
-            },
-            "NUnit": {
-              "target": "Package",
-              "version": "[3.13.3, )"
-            },
-            "NUnit.Analyzers": {
-              "target": "Package",
-              "version": "[3.6.1, )"
-            },
-            "NUnit3TestAdapter": {
-              "target": "Package",
-              "version": "[4.4.2, )"
-            },
-            "coverlet.collector": {
-              "target": "Package",
-              "version": "[3.2.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -75,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/ehsaas.grover/.dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
         }
       }
     }

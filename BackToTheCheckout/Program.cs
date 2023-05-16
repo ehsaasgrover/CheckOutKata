@@ -23,10 +23,18 @@ namespace BackToTheCheckout
             checkout.Scan("D");
             checkout.Scan("C");
 
-            // playing around with changing rules, debug this its wrong
+            // Different rules
             Rules rules2 = new Rules(40, 20, 20, 15, 2, 15, 3, 20);
             Checkout checkout2 = new Checkout(rules2);
-            checkout.CalculateTotalPrice("AAA");
+            checkout2.CalculateTotalPrice("AAA");
+            checkout2.CalculateTotalPrice("AAABBC");
+            checkout2.Scan("A");
+            checkout2.Scan("A");
+            checkout2.Scan("A");
+            checkout2.Scan("B");
+            checkout2.Scan("B");
+            checkout2.Scan("C");
+            
         }
     }
 }

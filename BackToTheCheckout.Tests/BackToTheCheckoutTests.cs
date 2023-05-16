@@ -31,6 +31,22 @@ public class Tests
 
     }
     
+    // Test Cases to check the total prices are calculated properly
+    [TestCase("",0)]
+    [TestCase("AAA",105)]
+    [TestCase("AAABBC",165)]
+    public void GivenInputIsMultipleValuesAndValidWithDifferentRules_ReturnTotalPriceAsExpected(string input, int expectedCost)
+    {
+        //Arrange
+        var checkout = new Checkout(new Rules(40, 20, 20, 15, 2, 15, 3, 20));
+        
+        //Act
+        int totalPrice = checkout.CalculateTotalPrice(input);
+        
+        //Assert
+        Assert.That(totalPrice, Is.EqualTo(expectedCost));
+    }
+    
     // Test for invalid arguments when calculating the total price
     [TestCase("ABE")]
     [TestCase("X")]

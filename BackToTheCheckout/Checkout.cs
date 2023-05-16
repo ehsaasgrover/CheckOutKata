@@ -86,7 +86,6 @@ namespace BackToTheCheckout
         }
 
         
-
         // Calculates the incremental total price after each scan
         public int Scan(String item)
         {
