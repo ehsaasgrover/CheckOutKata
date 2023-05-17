@@ -1,0 +1,15 @@
+/Users/ehsaasgrover/RiderProjects/CheckOutKata/BackToTheCheckout/bin/Debug/net7.0/BackToTheCheckout
+/Users/ehsaasgrover/RiderProjects/CheckOutKata/BackToTheCheckout/bin/Debug/net7.0/BackToTheCheckout.deps.json
+/Users/ehsaasgrover/RiderProjects/CheckOutKata/BackToTheCheckout/bin/Debug/net7.0/BackToTheCheckout.runtimeconfig.json
+/Users/ehsaasgrover/RiderProjects/CheckOutKata/BackToTheCheckout/bin/Debug/net7.0/BackToTheCheckout.dll
+/Users/ehsaasgrover/RiderProjects/CheckOutKata/BackToTheCheckout/bin/Debug/net7.0/BackToTheCheckout.pdb
+/Users/ehsaasgrover/RiderProjects/CheckOutKata/BackToTheCheckout/obj/Debug/net7.0/BackToTheCheckout.csproj.AssemblyReference.cache
+/Users/ehsaasgrover/RiderProjects/CheckOutKata/BackToTheCheckout/obj/Debug/net7.0/BackToTheCheckout.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ehsaasgrover/RiderProjects/CheckOutKata/BackToTheCheckout/obj/Debug/net7.0/BackToTheCheckout.AssemblyInfoInputs.cache
+/Users/ehsaasgrover/RiderProjects/CheckOutKata/BackToTheCheckout/obj/Debug/net7.0/BackToTheCheckout.AssemblyInfo.cs
+/Users/ehsaasgrover/RiderProjects/CheckOutKata/BackToTheCheckout/obj/Debug/net7.0/BackToTheCheckout.csproj.CoreCompileInputs.cache
+/Users/ehsaasgrover/RiderProjects/CheckOutKata/BackToTheCheckout/obj/Debug/net7.0/BackToTheCheckout.dll
+/Users/ehsaasgrover/RiderProjects/CheckOutKata/BackToTheCheckout/obj/Debug/net7.0/refint/BackToTheCheckout.dll
+/Users/ehsaasgrover/RiderProjects/CheckOutKata/BackToTheCheckout/obj/Debug/net7.0/BackToTheCheckout.pdb
+/Users/ehsaasgrover/RiderProjects/CheckOutKata/BackToTheCheckout/obj/Debug/net7.0/BackToTheCheckout.genruntimeconfig.cache
+/Users/ehsaasgrover/RiderProjects/CheckOutKata/BackToTheCheckout/obj/Debug/net7.0/ref/BackToTheCheckout.dll
