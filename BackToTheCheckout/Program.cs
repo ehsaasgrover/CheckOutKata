@@ -12,7 +12,7 @@ namespace BackToTheCheckout
             Rules rules = new Rules(50, 30, 20, 15,3, 20, 2, 15);
             Checkout checkout = new Checkout(rules);
             checkout.CalculateTotalPrice("AAA");
-            // checkout.CalculateTotalPrice("DABABA");
+            checkout.CalculateTotalPrice("AAABBC");
             checkout.CalculateTotalPrice("AAABBCDC");
             checkout.Scan("A");
             checkout.Scan("A");
